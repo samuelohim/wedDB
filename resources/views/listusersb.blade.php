@@ -35,14 +35,14 @@
 		      			<form action="/wedDB/{{$user->id}}/edit" method = 'GET'>
 		      				{!! csrf_field() !!}
 		      				<button type = 'submit' class = 'btn btn-warning'>
-		      					<span class="glyphicon glyphicon-trash"></span>
+		      					<span class="glyphicon glyphicon-cog"></span>
 		      				</button>
 		      			</form></li>
 	      			<li>
 		      			<form action="/wedDB/{{$user->id}}" method = 'GET'>
 		      				{!! csrf_field() !!}
 		      				<button type = 'submit' class = 'btn btn-success'>
-		      					<span class="glyphicon glyphicon-trash"></span>
+		      					<span class="glyphicon glyphicon-search"></span>
 		      				</button>
 		      			</form>
 		      		</li>	
