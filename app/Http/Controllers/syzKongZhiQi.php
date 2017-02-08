@@ -14,8 +14,8 @@ class syzKongZhiQi extends Controller
      */
     public function index()
     {
-        //
-        return view('listusersb');
+        $users = User::get();
+        return view('listusersb', compact('users'));
     }
 
     /**
