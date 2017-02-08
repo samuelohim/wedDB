@@ -75,6 +75,15 @@ class syzKongZhiQi extends Controller
     public function update(Request $request, $id)
     {
         //
+        $user = User::find($id);
+        if($request->has('name'))
+            $user->name = $request->input('name');
+        if($request->has('email'))
+            $user->email = $request->input('email');
+        if($request->has('password'))
+            $user->password = bcrypt($request->input('password'));
+        $user->save();
+        return redirect('wedDB');
     }
 
     /**
