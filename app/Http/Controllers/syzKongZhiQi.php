@@ -47,7 +47,8 @@ class syzKongZhiQi extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('showuserb', compact('user'));
     }
 
     /**
@@ -58,7 +59,10 @@ class syzKongZhiQi extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+
+
+        return view('edituserb', compact('user'));
     }
 
     /**
