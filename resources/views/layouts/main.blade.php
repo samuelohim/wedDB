@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
 </head>
 <body>
+	<div class="container container-fluid">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -42,8 +43,11 @@
 	</nav>
 
 
-	<main>
-		@yield('content')
-	</main>
+			<main>
+				@yield('content')
+			</main>
+
+	</div>
+
 </body>
 </html>
