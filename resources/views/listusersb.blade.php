@@ -9,6 +9,7 @@
 	      <th>Name</th>
 	      <th>Email</th>
 	      <th>Creation date</th>
+	      <th><span class="glyphicon glyphicon-wrench"></span></th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -18,7 +19,24 @@
 		      <td>{{$user->id}}</td>
 		      <td>{{$user->name}}</td>
 		      <td>{{$user->email}}</td>
-		      <td>{{$user->created_date}}</td>
+		      <td>{{$user->created_at}}</td>
+		      <td>
+		      	<ul class="list-inline">
+		      		<li>
+		      			<form action="/wedDB/{{$user->id}}" method = 'POST'>
+		      				{!! csrf_field() !!}
+		      				<input type="hidden" name = '_method' value = 'DELETE'>
+		      				<button type = 'submit'>
+		      					<span class="glyphicon glyphicon-trash"></span>
+		      				</button>
+		      			</form>
+		      		</li>
+	      			<li></li>
+	      			<li></li>
+	      			<li></li>
+	      			<li></li>	
+		      	</ul>
+		      </td>
 		    </tr>
 
 		@endforeach
